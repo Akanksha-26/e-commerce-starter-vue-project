@@ -8,11 +8,11 @@
                 <h3 class="item__price">INR {{item.totalCost}}</h3>
                 <div class="item__action">
                     <counter v-if="item.count > 0" :qtyObj= "{ count: item.count, id: item.id }"  @change="onChangeQty($event)"></counter>
-                </div>   
+                </div>
             </md-content>
             <md-divider></md-divider>
-            <md-content class=" total-bill md-elevation-5"> 
-                <h3>TOTAL BILL</h3>    
+            <md-content class=" total-bill md-elevation-5">
+                <h3>TOTAL BILL</h3>
                 <h3>INR {{ totalBill }}</h3>
             </md-content>
         <div class="home__action" >

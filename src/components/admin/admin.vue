@@ -60,5 +60,3 @@
         margin-top: auto;
     }
 </style>
-
-

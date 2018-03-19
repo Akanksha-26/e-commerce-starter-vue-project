@@ -3,19 +3,18 @@
   <div class="home">
       <h1>Please select items from menu</h1>
       <div class="menu">
-                <md-content class="menu-item md-elevation-8" v-for="(item) in products" :key = item.id>
-                    <h3 class="item__text">{{item.name}}</h3>
-                    <h3 class="item__price">INR {{item.price}}</h3>
-                    <div class="item__action">
-                        <counter v-if="item.count > 0" :qtyObj= "{ count: item.count, id: item.id }"  @change="onChangeQty($event)"></counter>
-                        <md-button v-if="item.count === 0" class="md-raised md-primary" @click="selectMenuItems(item)">Add</md-button>
-                    </div>
-                </md-content>
-          
-        <div class="home__action">
-          <md-button v-if="isMenuItemSelected" class="md-raised md-primary" @click="proceedToCheckout">Checkout</md-button>
-          <md-button v-if="!isMenuItemSelected" class="md-raised" disabled>Checkout</md-button>
-        </div>
+            <md-content class="menu-item md-elevation-8" v-for="(item) in products" :key = item.id>
+                <h3 class="item__text">{{item.name}}</h3>
+                <h3 class="item__price">INR {{item.price}}</h3>
+                <div class="item__action">
+                    <counter v-if="item.count > 0" :qtyObj= "{ count: item.count, id: item.id }"  @change="onChangeQty($event)"></counter>
+                    <md-button v-if="item.count === 0" class="md-raised md-primary" @click="selectMenuItems(item)">Add</md-button>
+                </div>
+            </md-content>
+            <div class="home__action">
+                <md-button v-if="isMenuItemSelected" class="md-raised md-primary" @click="proceedToCheckout">Checkout</md-button>
+                <md-button v-if="!isMenuItemSelected" class="md-raised" disabled>Checkout</md-button>
+            </div>
       </div>
   </div>
 </template>

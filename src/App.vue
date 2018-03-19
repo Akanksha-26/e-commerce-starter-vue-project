@@ -8,7 +8,7 @@
 <script>
 export default {
   name: 'App',
-  created() {
+  created () {
     this.$store.dispatch('menuStore/setIntialState')
   }
 }
